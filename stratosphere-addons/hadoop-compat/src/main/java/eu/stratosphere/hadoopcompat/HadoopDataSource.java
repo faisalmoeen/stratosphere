@@ -1,13 +1,10 @@
 package eu.stratosphere.hadoopcompat;
 
-import java.lang.annotation.Annotation;
 
 import org.apache.hadoop.mapred.InputFormat;
 import org.apache.hadoop.mapred.JobConf;
 
 import eu.stratosphere.api.common.operators.GenericDataSource;
-import eu.stratosphere.api.common.operators.Operator;
-import eu.stratosphere.util.Visitor;
 
 public class HadoopDataSource extends GenericDataSource<HadoopInputFormatWrapper<?,?,?>> {
 

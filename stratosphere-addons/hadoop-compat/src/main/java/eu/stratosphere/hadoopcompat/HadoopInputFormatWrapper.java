@@ -19,9 +19,6 @@ import eu.stratosphere.types.Value;
 
 public class HadoopInputFormatWrapper<OT extends Record,K,V> implements InputFormat<Record, HadoopInputSplitWrapper> {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public transient org.apache.hadoop.mapred.InputFormat<K, V> hadoopInputFormat;
@@ -44,7 +41,6 @@ public class HadoopInputFormatWrapper<OT extends Record,K,V> implements InputFor
 		this.hadoopInputFormatName = hadoopInputFormat.getClass().getName();
 		this.jobConf = job;
 		ReflectionUtils.setConf(this.hadoopInputFormat, jobConf);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public HadoopInputFormatWrapper(org.apache.hadoop.mapred.InputFormat<K,V> hadoopInputFormat, JobConf job, String filePath) {
@@ -54,7 +50,6 @@ public class HadoopInputFormatWrapper<OT extends Record,K,V> implements InputFor
 		this.jobConf = job;
 		ReflectionUtils.setConf(this.hadoopInputFormat, jobConf);
 		this.setFilePath(filePath);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -65,7 +60,6 @@ public class HadoopInputFormatWrapper<OT extends Record,K,V> implements InputFor
 	@Override
 	public BaseStatistics getStatistics(BaseStatistics cachedStatistics)
 			throws IOException {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
